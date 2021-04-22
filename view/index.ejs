@@ -1,0 +1,39 @@
+<%- include('./layout/header.ejs'); %>
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="site-heading">
+					<h1>Clean Blog</h1>
+					<span class="subheading">A Blog Theme by Start Bootstrap</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-md-10 mx-auto">
+			<% for(var i = users.length-1; i >= 0; i--) { %>
+			<div class="post-preview">
+				
+				<a href="/single-post/<%= users[i].id %>">
+					<h2 class="post-title"><%= users[i].title %></h2>
+					<img class="img-fluid" src="../photos/<%= users[i].blogPhoto %>" width="250px" height="100%" alt="" />
+					<h3 class="post-subtitle"><%= users[i].desTitle %></h3>
+				</a>
+				<p class="post-meta">		
+					<%= users[i].date %>
+				</p>
+			</div>
+			<% } %>
+			<hr />
+			<!-- Pager-->
+
+		</div>
+	</div>
+</div>
+<hr />
+
+   <%- include('./layout/footer.ejs'); %>

@@ -1,0 +1,34 @@
+<%- include('./layout/header.ejs'); %>
+<header class="masthead" style="background-image: url('/img/post-bg.jpg')">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="post-heading">
+					<h1></h1>
+					<h2 class="subheading"><%= blog.desTitle %></h2>
+					<span class="meta">
+					
+						<%= blog.date %>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<article>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				
+				<h2 class="section-heading"><%= blog.title %></h2>
+			
+				<p><%= blog.description %></p>
+				<a href="#!"><img class="img-fluid" src="../photos/<%= blog.blogPhoto %>" alt="..." /></a>
+				
+			</div>
+		</div>
+	</div>
+</article>
+<hr />
+		<%- include('./layout/footer.ejs'); %>
